@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    height: 100%;
+    background-color: #000000e8;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5vw 1.4vw;
+    min-height: 25px;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid ; */
+    /* border-color: #dadada; */
+    background-color: rgba(184, 135, 11, 0.447);
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+li{
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    
+}
+li:hover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    border-radius: 10px;
+    background: #000;
+    animation-name: slideEffect;
+    animation-duration: 2s;
+    animation-delay: 1ms;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: both;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.842);
+    color: white;
+
+}
+
+@keyframes slideEffect {
+    0%{
+        left: 0;
+        width: 0%;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
+
+
+#slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+    height: 450px;
+}
+
+#slide{
+    width:95%;
+    height:100% ;
+    border: 1px solid;
+    border-radius: 10px;
+    background-image: url('/images/img1.jpeg');
+    background-size: 100% 100%;
+    box-shadow: 1px 1px 10px #000;
+    animation-name: sliderAnimation;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: infinite;
+}
+@keyframes sliderAnimation {
+    0%{
+        background-image: url('/images/img1.jpeg');
+    }
+    25%{
+        background-image: url('/images/img2.jpeg');
+    }
+    50%{
+        background-image: url('/images/img3.jpeg');
+    }
+    100%{
+        background-image: url('/images/img1.jpeg');
+    }
+}
+
+#rougfhClothes,#newClothes,#usedClothes{
+    padding: 1.7vw 2vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: aquamarine; */
+}
+#rougfhClothes>h1, #usedClothes>h1, #newClothes>h1{
+    text-align: center;
+}
+.cart{
+    max-width:290px;
+    min-height: 250px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: auto 0.2vw;
+    margin-top: 2vw;
+}
+.cart:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.cart_Content{
+    padding: 0.8vw;
+}
+.cart_Content>h3{
+    margin-bottom: 0.5vw;
+}
+.cart_Content>p{
+    margin-bottom: 0.8vw;
+}
+button{
+    padding: 0.7vw 1vw;
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.98);
+}
+#wrapperDiv{
+    display: flex;
+    justify-content: space-around;
+   /* align-items: center; */
+    flex-wrap: wrap;
+    padding: 1vw;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0.3vw 1vw;
+    border-top: 1px solid #dada;
+    background-color: rgba(184, 135, 11, 0.447);
+}
+@media screen and (max-width: 420px) {
+    .cart{
+        width: 700px;
+        height: 200px;
+    }
+  }
