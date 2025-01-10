@@ -84,7 +84,7 @@ nav ul li a{
     height:100% ;
     border: 1px solid;
     border-radius: 10px;
-    background-image: url('./images/img1.jpeg');
+    background-image: url('images/img1.jpeg');
     background-size: 100% 100%;
     box-shadow: 1px 1px 10px #000;
     animation-name: sliderAnimation;
@@ -95,16 +95,16 @@ nav ul li a{
 }
 @keyframes sliderAnimation {
     0%{
-        background-image: url('./images/img1.jpeg');
+        background-image: url('images/img1.jpeg');
     }
     25%{
-        background-image: url('./images/img2.jpeg');
+        background-image: url('images/img2.jpeg');
     }
     50%{
-        background-image: url('./images/img3.jpeg');
+        background-image: url('images/img3.jpeg');
     }
     100%{
-        background-image: url('./images/img1.jpeg');
+        background-image: url('images/img1.jpeg');
     }
 }
 
